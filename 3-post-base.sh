@@ -1,3 +1,44 @@
+echo ""
+echo "Set your timezone"
+echo ""
+ls /usr/share/zoneinfo/
+echo ""
+echo "Africa:"
+echo ""
+ls /usr/share/zoneinfo/Africa
+echo ""
+echo "America:"
+echo ""
+ls /usr/share/zoneinfo/America
+echo ""
+echo "Antartica:"
+echo ""
+ls /usr/share/zoneinfo/Antartica
+echo ""
+echo "Arctic:"
+echo ""
+ls /usr/share/zoneinfo/Arctic 
+echo ""
+echo "Asia:"
+echo ""
+ls /usr/share/zoneinfo/Asia
+echo ""
+echo "Atlantic:"
+echo ""
+ls /usr/share/zoneinfo/Atlantic
+echo ""
+echo "Europe:"
+echo ""
+ls /usr/share/zoneinfo/Europe
+echo ""
+echo "Canada:"
+echo ""
+ls /usr/share/zoneinfo/Canada
+echo ""
+read -p "Enter your timezone (For e.g. Asia/Kolkata or US/Eastern): " TMZ
+ln -sf /usr/share/zoneinfo/$TMZ /etc/localtime
+hwclock --systohc
+pacman -Sy
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 touch /etc/locale.conf
@@ -16,18 +57,10 @@ passwd $USER
 usermod -aG wheel,audio,video,optical,storage $USER
 pacman -S sudo
 echo "%wheel ALL = (ALL) ALL" >> /etc/sudoers.tmp
-sudo pacman -S efibootmgr os-prober dosfstools mtools
-grub-install --target=x86_64-efi  --bootloader-id=grub_uefi --recheck
+sudo pacman -S efibootmgr os-prober dosfstools mtools grub
+grub-install --target=x86_64-efi --efi-directory=/efi/  --bootloader-id=grub_uefi --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S networkmanager
 systemctl enable NetworkManager
-exit
-umount -l /mnt
-read -p "Complete Base Installation done. Reboot? " OPT
-if [ $OPT = "yes" ]; then
-  reboot
-elif [ $OPT = "no" ]; then
-  exit
-else
-  echo "Invalid Input"
-fi
+
+echo "POST SETUP COMPLETE! NOW EXIT CHROOT AND EXECUTE THE 4-exit.sh FILE"

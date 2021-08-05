@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Make sure you have 3 partitions ready for the installation.
 
 One for efi (512MB)
@@ -21,8 +23,8 @@ if [ $OPT = "yes" ]; then
   mkfs.fat -F32 $EFI
   swapon $SWAP
   mount $ROOT /mnt
-  mkdir /boot/EFI
-  mount $EFI /boot/EFI
+  mkdir /mnt/efi
+  mount $EFI /mnt/efi
 elif [ $OPT = "no" ]; then
   exit
 else
