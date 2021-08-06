@@ -176,6 +176,18 @@ bash gnome/install.sh
 ```
 bash xfce/install.sh
 ```
+
+###### LXDE:
+
+```
+bash lxde/install.sh
+```
+
+###### MATE:
+
+```
+bash mate/install.sh
+```
 ##### That's it, far easier!
 
 ## Special Notes
