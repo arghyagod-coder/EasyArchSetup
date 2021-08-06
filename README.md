@@ -81,7 +81,7 @@ cd EasyArchSetup
 
 ##### Setup Keyboard Layout
 
-As it is indexed, there are 5 scripts, indexed from 0-4. That's the order they are executed in. 
+As it is indexed, there are 6 scripts, indexed from 0-5. That's the order they are executed in. 
 
 The [0-setup.sh](/0-setup.sh) script is only to be executed if you want a keyboard layout other than US
 
@@ -147,7 +147,11 @@ First it will tell you to ask for your timezone. It will even show some timezone
 
 Then it asks for computer name and username. Also passwords of each
 
-Thats it! Its done. Now execute `exit` to get out of chroot and execute the exit script. The system will reboot and you will be done! 
+##### Drivers
+
+Run the [drivers script](/4-drivers.sh) and get your preferred drivers
+
+Thats it! Its done. Now execute `exit` to get out of chroot and execute the [exit script](/5-exit.sh). The system will reboot and you will be done! 
 
 ##### Setup your desktop!
 

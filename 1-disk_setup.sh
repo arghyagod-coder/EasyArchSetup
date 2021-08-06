@@ -10,7 +10,7 @@ You can do this with tools like CFDISK
 "
 
 read -p "Are you ready? (y/n): " OPT
-if [ $OPT = "yes" ]; then
+if [ $OPT = "y" ]; then
   timedatectl set-ntp true
   lsblk
   echo ""
