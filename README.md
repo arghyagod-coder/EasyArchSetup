@@ -147,8 +147,35 @@ First it will tell you to ask for your timezone. It will even show some timezone
 
 Then it asks for computer name and username. Also passwords of each
 
-Thats it! Its done. Now execute `exit` to get out of chroot and execute the exit script. The system will reboot and you will be done!
+Thats it! Its done. Now execute `exit` to get out of chroot and execute the exit script. The system will reboot and you will be done! 
 
+##### Setup your desktop!
+
+Ok, so you have installed base arch. But after that? Scared to install stuff one by one. Cm'on les help you
+
+###### GNOME:
+
+```
+bash gnome/install.sh
+```
+
+###### KDE:
+
+```
+bash kde/install.sh
+```
+
+###### GNOME:
+
+```
+bash gnome/install.sh
+```
+
+###### XFCE:
+
+```
+bash xfce/install.sh
+```
 ##### That's it, far easier!
 
 ## Special Notes

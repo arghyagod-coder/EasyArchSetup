@@ -61,6 +61,11 @@ sudo pacman -S efibootmgr os-prober dosfstools mtools grub -y
 grub-install --target=x86_64-efi --efi-directory=/efi/  --bootloader-id=grub_uefi --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S networkmanager -y
+pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+cd ..
 systemctl enable NetworkManager
 
 echo "POST SETUP COMPLETE! NOW EXIT CHROOT AND EXECUTE THE 4-exit.sh FILE"
