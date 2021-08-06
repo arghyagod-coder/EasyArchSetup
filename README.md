@@ -4,9 +4,18 @@ Scared installing Arch? No problem! ;)
 
 These set of scripts will allow you to install arch linux easily, and by that I mean too easily.
 
+## Reference Videos:
+
+#### Detailed: (recommended)
+
+https://youtu.be/FnuvDMTp21E
+#### Shortened: (Basic Installation, more straight forward)
+
+https://youtu.be/k0alpHfXEQw
+
 ## Points to note:
 
-- For now, it only installs the base arch system.
+- It can install only base arch system, and even install a desktop environment for it. ;)
 - It only supports UEFI boot
 - It ofcourse needs Internet
 
@@ -147,11 +156,12 @@ First it will tell you to ask for your timezone. It will even show some timezone
 
 Then it asks for computer name and username. Also passwords of each
 
+
+Thats it! Its done. Now execute `exit` to get out of chroot and execute the [exit script](/5-exit.sh). The system will reboot and you will have to get the drivers script! 
+
 ##### Drivers
 
 Run the [drivers script](/4-drivers.sh) and get your preferred drivers
-
-Thats it! Its done. Now execute `exit` to get out of chroot and execute the [exit script](/5-exit.sh). The system will reboot and you will be done! 
 
 ##### Setup your desktop!
 
@@ -169,10 +179,10 @@ bash gnome/install.sh
 bash kde/install.sh
 ```
 
-###### GNOME:
+###### Cinnamon:
 
 ```
-bash gnome/install.sh
+bash cinnamon/install.sh
 ```
 
 ###### XFCE:

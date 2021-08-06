@@ -1,3 +1,7 @@
+git clone https://aur.archlinux.org/yay-git.git
+cd yay-git
+makepkg -si
+cd ..
 yay -S xf86-input-libinput xf86-input-synaptics xf86-input-libinput xf86-input-libinput xorg-xinput 
 read -p "Is your processor of AMD (a) or Intel (i)?" OPT
 if [ $OPT = "i" ]; then

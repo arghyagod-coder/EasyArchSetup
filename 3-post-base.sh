@@ -62,11 +62,7 @@ grub-install --target=x86_64-efi --efi-directory=/efi/  --bootloader-id=grub_uef
 grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S networkmanager -y
 pacman -S git nano -y
-pacman -S --needed base-devel
-git clone https://aur.archlinux.org/yay-git.git
-cd yay-git
-makepkg -si
-cd ..
+pacman -S --needed base-devel -y
 systemctl enable NetworkManager
 
 echo "POST SETUP COMPLETE! NOW EXIT CHROOT AND EXECUTE THE 4-exit.sh FILE"
