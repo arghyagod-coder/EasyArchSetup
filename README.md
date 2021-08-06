@@ -188,6 +188,18 @@ bash lxde/install.sh
 ```
 bash mate/install.sh
 ```
+
+###### AwesomeWM:
+
+```
+bash awesome/install.sh
+```
+
+###### MkOsh:
+
+```
+bash mkosh/install.sh
+```
 ##### That's it, far easier!
 
 ## Special Notes
