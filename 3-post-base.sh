@@ -55,12 +55,12 @@ passwd
 useradd -m $USER
 passwd $USER
 usermod -aG wheel,audio,video,optical,storage $USER
-pacman -S sudo
+pacman -S sudo -y
 echo "%wheel ALL = (ALL) ALL" >> /etc/sudoers.tmp
-sudo pacman -S efibootmgr os-prober dosfstools mtools grub
+sudo pacman -S efibootmgr os-prober dosfstools mtools grub -y
 grub-install --target=x86_64-efi --efi-directory=/efi/  --bootloader-id=grub_uefi --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
-pacman -S networkmanager
+pacman -S networkmanager -y
 systemctl enable NetworkManager
 
 echo "POST SETUP COMPLETE! NOW EXIT CHROOT AND EXECUTE THE 4-exit.sh FILE"

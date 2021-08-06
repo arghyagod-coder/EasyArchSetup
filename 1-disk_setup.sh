@@ -11,6 +11,7 @@ You can do this with tools like CFDISK
 
 read -p "Are you ready? (y/n): " OPT
 if [ $OPT = "yes" ]; then
+  timedatectl set-ntp true
   lsblk
   echo ""
   echo "Enter your partition name in the following (for e.g. /dev/sdaXX)"
