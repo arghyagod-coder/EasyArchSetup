@@ -56,14 +56,14 @@ useradd -m $USER
 passwd $USER
 usermod -aG wheel,audio,video,optical,storage $USER
 pacman -S sudo -y
-echo "%wheel ALL = (ALL) ALL" >> /etc/sudoers.tmp
+echo "%wheel ALL = (ALL) ALL" >> /etc/sudoers
 sudo pacman -S efibootmgr os-prober dosfstools mtools grub -y
 grub-install --target=x86_64-efi --efi-directory=/efi/  --bootloader-id=grub_uefi --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S networkmanager -y
 pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git
-cd paru
+git clone https://aur.archlinux.org/yay-git.git
+cd yay-git
 makepkg -si
 cd ..
 systemctl enable NetworkManager
