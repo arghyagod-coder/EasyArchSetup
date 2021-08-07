@@ -1,4 +1,4 @@
-yay -S rofi awesome-git picom-git inter-font light-git mpd mcd alsa-utils pulseaudio pulseaudio-alsa acpi acpid maim xclip xfce4-power-manager feh nm-applet pnmixer xorg-xinput noto-fonts-emoji upower xdg-user-dirs ffmpeg iw iproute2
+yay -S rofi awesome code nautilus kitty awesome-git picom-git inter-font light-git mpd mcd alsa-utils pulseaudio pulseaudio-alsa acpi acpid maim xclip xfce4-power-manager feh nm-applet pnmixer xorg-xinput noto-fonts-emoji upower xdg-user-dirs ffmpeg iw iproute2
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/awesome
 git clone https://github.com/Mengo-Team/MkOsh

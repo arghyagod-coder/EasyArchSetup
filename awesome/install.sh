@@ -1,4 +1,4 @@
-yay -S awesome rofi picom i3lock-fancy xclip ttf-roboto polkit-gnome materia-theme lxappearance flameshot pnmixer network-manager-applet xfce4-power-manager qt5-styleplugins papirus-icon-theme -y
+yay -S awesome code nautilus terminator rofi picom i3lock-fancy xclip ttf-roboto polkit-gnome materia-theme lxappearance flameshot pnmixer network-manager-applet xfce4-power-manager qt5-styleplugins papirus-icon-theme -y
 git clone https://github.com/ChrisTitusTech/titus-awesome 
 mkdir -p ~/.config/awesome
 cp -r titus-awesome/* ~/.config/awesome
