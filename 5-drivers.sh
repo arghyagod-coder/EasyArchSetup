@@ -25,3 +25,4 @@ else
   echo "Invalid Input"
 fi
 yay -S pulseaudio pulseaudio-alsa alsa-utils pulseaudio-bluetooth alsa-plugins
+

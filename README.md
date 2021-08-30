@@ -15,7 +15,7 @@ https://youtu.be/k0alpHfXEQw
 
 ## Points to note:
 
-- It can install only base arch system, and even install a desktop environment for it. ;)
+- It can install a base arch system, and even install a desktop environment for it. ;)
 - It only supports UEFI boot
 - It ofcourse needs Internet
 
@@ -25,7 +25,42 @@ https://youtu.be/k0alpHfXEQw
 
 1. Get an [ArchLinux iso](https://archlinux.org/download/) and make a bootable USB out of it (Use [Etcher](https://etcher.io) to do that)
 
-2. Boot through the iso.
+#### - Direct Link
+[ArchLinux-64-bit_iso](http://mirror.rackspace.com/archlinux/iso/2021.08.01/archlinux-2021.08.01-x86_64.iso)
+
+#### - Etcher
+
+- 0. Plug in your USB
+
+- 1. Download your executable for any platform
+
+![](https://i.ibb.co/Qm1N3K8/Screenshot-from-2021-08-30-19-33-13.png)
+
+- 2. Launch the executable
+
+- 3. Click `Flash from File` and select your iso file
+
+![](https://i.ibb.co/6WK2Vwd/Screenshot-from-2021-08-30-19-37-28.png)
+
+- 4. Click `Select Device` and select your USB/SD Card
+
+![](https://i.ibb.co/RN1h3N6/Screenshot-from-2021-08-30-19-37-45.png)
+
+- 5. Click Flash! and it will be done
+
+2. Boot through the USB
+
+#### - Breakdown
+
+Restart your system. At the boot screen when you see the logo of your computer manufacturer, press F2 or F10 or F12 to enter the BIOS settings.
+
+In here, you should make sure that booting for USB or removable media is on the top of the boot order.
+
+![](https://i1.wp.com/itsfoss.com/wp-content/uploads/2020/01/boot_order-BIOS.jpg?w=799&ssl=1)
+
+This screen may look different for different manufacturers. You’ll have to find this setting on your own or search the internet.
+
+Make the changes, save and exit
 
 3. When u see tty, first connect to the internet. If you are on ethermnet, it should happen automatically, and if you are on wifi, I'm here to help you with that. But first check if internet is really working. For this, execute:
 
@@ -150,14 +185,16 @@ Now the base installation. Run the [base install script](/2-base_install.sh). An
 
 ##### Post-Install
 
-This is a crucial part, as Arch is more of configuring than installing. Use the [script 3](/3-post-base.sh) to do this.
+This is a crucial part, as Arch is more of configuring than installing. Use the [script 3](/3-post-base.sh) to do this:
+
+**You will be noticing that you don't have any stuff installed in your chroot. Reinstall git and nano (`sudo pacman -S git nano`. Then cd into the rsc directory (`cd rsc`) to get all your scripts back.)**
 
 First it will tell you to ask for your timezone. It will even show some timezones. You should know your timezone. If its of India, the timezone is in Kolkata. Hence the timezone is Asia/Kolkata. You can research a bit about this thing.
 
-Then it asks for computer name and username. Also passwords of each
+Then it asks for computer name and username. Also passwords of each user.
 
 
-Thats it! Its done. Now execute `exit` to get out of chroot and execute the [exit script](/5-exit.sh). The system will reboot and you will have to get the drivers script! 
+Thats it! Its done. Now execute `exit` to get out of chroot and execute the [exit script](/5-exit.sh). The system will reboot and you will have to get the drivers script after reboot (again in the rsc folder)! 
 
 ##### Drivers
 
@@ -214,7 +251,7 @@ bash awesome/install.sh
 ```
 bash mkosh/install.sh
 ```
-##### That's it, far easier!
+##### That's it, Arch really made Easy!
 
 ## Special Notes
 
